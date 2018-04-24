@@ -1,4 +1,7 @@
 .vscode
 
+*.csproj.user
+
 obj
 bin
+dist
