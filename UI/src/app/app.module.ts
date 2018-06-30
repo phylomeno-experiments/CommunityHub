@@ -4,16 +4,16 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { IframeSiteComponent } from './iframe-site/iframe-site.component';
+import { NavigationComponent } from './navigation/navigation.component';
 
-const appRoutes: Routes = [
-  { path: 'iframe-site', component: IframeSiteComponent }
-];
+const appRoutes: Routes = [];
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    IframeSiteComponent
+    IframeSiteComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,
@@ -22,6 +22,9 @@ const appRoutes: Routes = [
     )
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    IframeSiteComponent
+  ]
 })
 export class AppModule { }
