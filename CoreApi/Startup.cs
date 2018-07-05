@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using CoreApi.Sites;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -26,6 +27,12 @@ namespace CoreApi
             {
                 c.SwaggerDoc("v1", new Info { Title = "CommunityHub CoreApi", Version = "v1" });
             });
+            RegisterApplicationDependencies(services);
+        }
+
+        private static void RegisterApplicationDependencies(IServiceCollection services)
+        {
+            services.AddSingleton<PluginSitesRepository, PluginSitesRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
