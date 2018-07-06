@@ -1,0 +1,10 @@
+version: '3'
+services:
+  core-api:
+    build: CoreApi\.
+    ports:
+     - "5000:5000"
+  ui:
+    build: UI\.
+    ports:
+     - "80:80"

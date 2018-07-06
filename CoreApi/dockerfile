@@ -11,3 +11,4 @@ FROM microsoft/aspnetcore
 WORKDIR /app
 COPY --from=build-env /app/dist/* ./CoreApi/
 ENTRYPOINT ["dotnet", "./CoreApi/CoreApi.dll"]
+EXPOSE 5000
