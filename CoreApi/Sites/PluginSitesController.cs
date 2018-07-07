@@ -17,7 +17,7 @@ namespace CoreApi.Sites
         public IActionResult GetPluginSites() => new OkObjectResult(_siteRepository.GetPluginSites());
 
         [HttpPost]
-        public IActionResult PostPluginSite(PluginSite site)
+        public IActionResult PostPluginSite([FromBody]PluginSite site)
         {
             _siteRepository.RegisterPluginSite(site);
             return new OkResult();
