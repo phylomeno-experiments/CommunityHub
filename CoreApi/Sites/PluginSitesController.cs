@@ -2,7 +2,7 @@
 
 namespace CoreApi.Sites
 {
-    [Route("api/[controller]")]
+    [Route("api/plugin-sites")]
     public class PluginSitesController : ControllerBase
     {
         private readonly PluginSitesRepository _siteRepository;

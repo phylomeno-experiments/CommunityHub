@@ -4,7 +4,7 @@ import { PluginSite } from './plugin-site';
 
 @Injectable()
 export class PluginSiteService {
-  pluginSiteUrl = 'http://localhost:5000/api/pluginsites'
+  pluginSiteUrl = 'http://localhost:5000/api/plugin-sites';
 
   constructor(private http: HttpClient) { }
 
