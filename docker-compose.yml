@@ -8,3 +8,13 @@ services:
     build: UI\.
     ports:
      - "80:80"
+    depends_on:
+     - "core-api"
+  helloworld:
+    build: Plugins\HelloWorld\.
+    ports:
+     - "5001:5001"
+    depends_on:
+     - "core-api"
+    environment:
+     - PYTHONUNBUFFERED=0
